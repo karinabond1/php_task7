@@ -10,30 +10,30 @@
 	
 
 	<form action="" method="post">
-	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
+	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS_NAME%</strong></div>
 	<div class="form-group">
     	<label for="exampleFormControlInput1">Name </label>
     	<input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="%NAME%" value=%NAME_VAL%>
   </div>
-	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
+	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS_EMAIL%</strong></div>
   	<div class="form-group">
     	<label for="exampleFormControlInput1">Email address</label>
     	<input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="%EMAIL%" value=%EMAIL_VAL%>
   </div>
-	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
+	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS_SELECT%</strong></div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Select the Theme</label>
     <select class="form-control" name="select" id="exampleFormControlSelect1" >%SELECT%
 		<option disabled selected>%SELECT%</option>
-		<option>Feedback</option>
-      	<option>Gratefulness</option>
-	 	 <option>Complain</option>
+		<option %SELECT_VAL_FEED%>Feedback</option>
+      	<option %SELECT_VAL_GRAT%>Gratefulness</option>
+        <option %SELECT_VAL_COM%>Complain</option>
     </select>
   </div>
-  <div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
+  <div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS_MESSAGE%</strong></div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Message</label>
-    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="%MESSAGE%" value=%MESSAGE_VAL%></textarea>
+    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="%MESSAGE%" >%MESSAGE_VAL%</textarea>
 	</div>
 	<input type="submit" name="btn" class="btn btn-warning" value="Send"></button>
 </form>
