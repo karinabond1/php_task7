@@ -7,15 +7,21 @@ class View
 
 	public function __construct($template)
 	{       
-		  $this->file = file_get_contents($template);
+		$this->file = file_get_contents($template);
 	}
 
 	public function addToReplace($mArray)
 	{
-	  foreach($mArray as $key=>$val)
-	   {
+	  	foreach($mArray as $key=>$val)
+	   	{		   
 			$this->forRender[$key] = $val;
-	   }
+		}
+		   
+	}
+
+	public function show($str)
+	{
+		echo $str;
 	}
 
 	public function templateRender()

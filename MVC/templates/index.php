@@ -2,37 +2,40 @@
 <head>
 	<title>%TITLE%</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="/home/user14/public_html/PHP/php_task7/MVC/css/global.css" rel="stylesheet" media="screen" >
+	<link href="css/global.css" rel="stylesheet" media="screen" >
 </head>
 <body>
 <div class="global">
 	<div><h2>Contact Form</h2></div>
-	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
+	
 
-	<form>
+	<form action="" method="post">
+	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
 	<div class="form-group">
     	<label for="exampleFormControlInput1">Name </label>
-    	<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="%NAME%">
+    	<input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="%NAME%" value=%NAME_VAL%>
   </div>
+	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
   	<div class="form-group">
     	<label for="exampleFormControlInput1">Email address</label>
-    	<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="%EMAIL%">
+    	<input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="%EMAIL%" value=%EMAIL_VAL%>
   </div>
+	<div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Select the Theme</label>
-    <select class="form-control" id="exampleFormControlSelect1">%SELECT%
+    <select class="form-control" name="select" id="exampleFormControlSelect1" >%SELECT%
 		<option disabled selected>%SELECT%</option>
 		<option>Feedback</option>
       	<option>Gratefulness</option>
 	 	 <option>Complain</option>
     </select>
   </div>
-  
+  <div style="color: #FF0000; font-size: 15px;"><strong>%ERRORS%</strong></div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Message</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="%TEXTAREA%"></textarea>
+    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="%MESSAGE%" value=%MESSAGE_VAL%></textarea>
 	</div>
-	<button type="button" name="email" class="btn btn-warning">Send</button>
+	<input type="submit" name="btn" class="btn btn-warning" value="Send"></button>
 </form>
 <div>
 
